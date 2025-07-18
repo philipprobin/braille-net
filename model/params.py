@@ -20,12 +20,11 @@ params = AttrDict(
         rect_margin = 0.3, #  every of 4 margions to char width
         max_std = 0.1,
         train_list_file_names = [
-            #r'DSBI/data/val_li2.txt',
-            r'DSBI/data/train_li2.txt',
+            r'train.txt',
         ],
         val_list_file_names = {
-            'val' :  [r'DSBI/data/val_li2.txt',],
-            'test' :  [r'DSBI/data/test_li2.txt',]
+            'val':  [r'val.txt',],
+            'test': [r'test.txt',]
         }
     ),
     augmentation = AttrDict(

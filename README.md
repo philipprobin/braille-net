@@ -155,6 +155,17 @@ Languages:
 
 Network weights: see repository `./weights` folder.
 
+### Training data
+
+Place your labeled Braille dataset inside the `AngelinaDataset` directory. The
+directory should contain list files `train.txt`, `val.txt` and `test.txt`. Each
+list file contains relative paths to images and their annotation files. The
+paths are resolved relative to `AngelinaDataset` so no absolute paths are
+required. Update `model/params.py` if your list file names differ.
+
+The training scripts use `local_config.dataset_path` to locate these files. By
+default it points to the `AngelinaDataset` folder in the repository root.
+
 ## Auxiliary instruments
 
 None.

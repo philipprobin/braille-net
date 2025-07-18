@@ -193,7 +193,8 @@ class BrailleSubDataset:
         self.image_files = []
         self.label_files = []
 
-        list_file = os.path.join(local_config.data_path, list_file_name)
+        # dataset lists are stored relative to local_config.dataset_path
+        list_file = os.path.join(local_config.dataset_path, list_file_name)
         data_dir = os.path.dirname(list_file)
         with open(list_file, 'r') as f:
             files = f.readlines()
@@ -376,9 +377,12 @@ if __name__ == '__main__':
         get_points=False,
         rect_margin=0.3
     ))
-    data_loader = create_dataloader(params, collate_fn = None,
-                                    list_file_names = [os.path.join(local_config.data_path, r"DSBI\data\train.txt")],
-                                    shuffle=False)
+    data_loader = create_dataloader(
+        params,
+        collate_fn=None,
+        list_file_names=[os.path.join(local_config.dataset_path, "train.txt")],
+        shuffle=False,
+    )
     print(len(data_loader))
 
 

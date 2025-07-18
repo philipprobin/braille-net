@@ -25,8 +25,8 @@ datasets = {
     # 'DSBI_test': [
     #                 r'DSBI\data\test.txt',
     #               ],
-    'val': [r'DSBI/data/val_li2.txt', ],
-    'test': [r'DSBI/data/test_li2.txt', ],
+    'val': [r'val.txt', ],
+    'test': [r'test.txt', ],
 }
 
 lang = 'RU'
